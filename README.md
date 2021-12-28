@@ -1,9 +1,9 @@
 Rotas:
-  GET: http://localhost:3000/compasso/projects/
-  POST: http://localhost:3000/compasso/projects/
-  GET: http://localhost:3000/compasso/projects/*id desejado*
-  DELETE: http://localhost:3000/compasso/projects/*id desejado*
-   PUT: http://localhost:3000/compasso/projects/*id desejado*
+  GET: http://localhost:3333/compasso/projects/
+  POST: http://localhost:3333/compasso/projects/
+  GET: http://localhost:3333/compasso/projects/*id desejado*
+  DELETE: http://localhost:3333/compasso/projects/*id desejado*
+   PUT: http://localhost:3333/compasso/projects/*id desejado*
 
 instalar dependencias com "yarn install" ou equivalente.
 
