@@ -1,26 +1,24 @@
-import mongoose from 'mongoose';
-import { model } from 'mongoose';
+const mongoose = require('mongoose');
 
 const TaskSchema = new mongoose.Schema({
-    project: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Project',
-        required: true,
-    },
     title: {
         type: String,
         required: true
     },
     taskRelevance: {
-        type: Number
+        type: Number,
+        min: 1,
+        max: 10,
+        require: true,
     },
     completed: {
         type: Boolean,
-        required: true
+        require: true,
+        default: false,
     },
     createdAt: {
         type: Date,
-        timestamps: true,
+        default: Date.now,
     },
     updatedAt: {
         type: Date,
@@ -28,4 +26,6 @@ const TaskSchema = new mongoose.Schema({
     },
 });
 
-export default model('Task', TaskSchema);
+const Task = mongoose.model('Task', TaskSchema);
+
+module.exports = Task;
